@@ -3,12 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/hello_world"
-        tools:context=".TillageAppActivity" />
+    <com.google.android.maps.MapView
+        android:id="@+id/mvMain"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:apiKey="@string/google_api_key"
+        android:clickable="true"
+        android:enabled="true"
+        android:state_enabled="true" />
+
+    <!-- <menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+        <item
+            android:id="@+id/menu_save"
+            android:icon="@drawable/ic_menu_save"
+            android:showAsAction="ifRoom|withText"
+            android:title="@string/menu_save"/>
+    </menu> -->
 
 </RelativeLayout>

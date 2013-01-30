@@ -1,8 +1,9 @@
 <resources>
 
-    <string name="app_name">android-TillageApp</string>
+    <string name="app_name">Tillage App</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_tillage_app">TillageApp</string>
+    <string name="google_api_key">04sGBEc7RmZfV67N6P66Zi5uMtTngMIuKS80PZg</string>
 
 </resources>
