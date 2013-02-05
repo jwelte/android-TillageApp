@@ -11,6 +11,7 @@ import com.google.android.maps.Overlay;
 import com.google.android.maps.OverlayItem;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.location.Criteria;
 import android.location.Location;
@@ -73,14 +74,12 @@ public class TillageAppActivity<Main> extends MapActivity {
 
 	@Override
 	protected void onPause() {
-		// TODO Auto-generated method stub
 		compass.disableCompass();
 		super.onPause();
 	}
 
 	@Override
 	protected void onResume() {
-		// TODO Auto-generated method stub
 		compass.enableCompass();
 		super.onResume();
 	}
@@ -95,19 +94,27 @@ public class TillageAppActivity<Main> extends MapActivity {
 
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
-		// TODO Auto-generated method stub
 		return super.onPrepareOptionsMenu(menu);
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// TODO Auto-generated method stub
-		return super.onOptionsItemSelected(item);
+		boolean result = true;
+		switch(item.getItemId()) {
+		case R.id.viewChangeToList:
+			Intent changeViewToList = new Intent("edu.purdue.tillageapp.TILLAGEAPPLISTACTIVITY");
+			startActivity(changeViewToList);
+		break;
+		case R.id.menu_settings:
+			Toast.makeText(this, "Settings", Toast.LENGTH_LONG).show();
+		break;
+	}
+		// If we didn't handle, let the super version try
+				return result | super.onOptionsItemSelected(item);
 	}
 
 	@Override
 	protected boolean isRouteDisplayed() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 

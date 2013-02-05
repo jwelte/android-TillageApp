@@ -20,8 +20,15 @@
             android:label="@string/title_activity_tillage_app" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TillageAppListActivity"
+            android:label="@string/title_activity_tillage_app" >
+            <intent-filter>
+                <action android:name="edu.purdue.tillageapp.TILLAGEAPPLISTACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>
