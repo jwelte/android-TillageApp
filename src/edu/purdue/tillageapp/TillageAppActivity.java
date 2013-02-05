@@ -108,6 +108,18 @@ public class TillageAppActivity<Main> extends MapActivity {
 		case R.id.menu_settings:
 			Toast.makeText(this, "Settings", Toast.LENGTH_LONG).show();
 		break;
+		case R.id.menu_plan:
+			Toast.makeText(this, "Plan", Toast.LENGTH_LONG).show();
+		break;
+		case R.id.tillage_type_Tillage:
+			Toast.makeText(this, "Tillage", Toast.LENGTH_LONG).show();
+		break;
+		case R.id.tillage_type_Chisel2012:
+			Toast.makeText(this, "Chisel 2012", Toast.LENGTH_LONG).show();
+		break;
+		case R.id.tillage_type_disc2012:
+			Toast.makeText(this, "Disc 2012", Toast.LENGTH_LONG).show();
+		break;
 	}
 		// If we didn't handle, let the super version try
 				return result | super.onOptionsItemSelected(item);
