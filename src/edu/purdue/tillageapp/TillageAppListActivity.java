@@ -45,7 +45,7 @@ public class TillageAppListActivity extends Activity{
 		boolean result = true;
 		switch(item.getItemId()) {
 		case R.id.viewChangeToMap:
-			Intent changeViewToMap = new Intent("android.intent.action.MAIN");
+			Intent changeViewToMap = new Intent(this, TillageAppActivity.class);
 			startActivity(changeViewToMap);
 		break;
 		case R.id.menu_settings:

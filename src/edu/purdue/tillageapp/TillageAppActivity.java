@@ -21,6 +21,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.Toast;
 
 public class TillageAppActivity<Main> extends MapActivity {
@@ -102,7 +103,7 @@ public class TillageAppActivity<Main> extends MapActivity {
 		boolean result = true;
 		switch(item.getItemId()) {
 		case R.id.viewChangeToList:
-			Intent changeViewToList = new Intent("edu.purdue.tillageapp.TILLAGEAPPLISTACTIVITY");
+			Intent changeViewToList = new Intent(this, TillageAppListActivity.class);
 			startActivity(changeViewToList);
 		break;
 		case R.id.menu_settings:

@@ -3,15 +3,28 @@
         android:title="@string/menu_settings"
         android:orderInCategory="100"
         android:showAsAction="never" />
-    <item android:id="@+id/viewChangeToList" android:icon="@drawable/ic_collections_view_as_list" android:showAsAction="always" android:orderInCategory="2"></item>
-    <item android:id="@+id/tillage_type" android:title="@string/tillage_menu" android:showAsAction="always|withText" android:orderInCategory="1">
+    <item android:id="@+id/viewChangeToList" 
+        android:icon="@drawable/ic_collections_view_as_list" 
+        android:showAsAction="always" 
+        android:orderInCategory="2"></item>
+    <item android:id="@+id/tillage_type" 
+        android:title="@string/tillage_menu" 
+        android:showAsAction="always|withText" 
+        android:orderInCategory="1">
         <menu>
-            <group android:id="@+id/tillage_type_group" android:checkableBehavior="single">
-                <item android:id="@+id/tillage_type_Tillage" android:title="@string/tillage_type_Tillage"/>
-                <item android:id="@+id/tillage_type_Chisel2012" android:title="@string/tillage_type_Chisel2012"/>
-                <item android:id="@+id/tillage_type_disc2012" android:title="@string/tillage_type_disc2012"/>
+            <group android:id="@+id/tillage_type_group" 
+                android:checkableBehavior="single">
+                <item android:id="@+id/tillage_type_Tillage" 
+                    android:title="@string/tillage_type_Tillage"/>
+                <item android:id="@+id/tillage_type_Chisel2012" 
+                    android:title="@string/tillage_type_Chisel2012"/>
+                <item android:id="@+id/tillage_type_disc2012" 
+                    android:title="@string/tillage_type_disc2012"/>
             </group>
         </menu>
     </item>
-    <item android:id="@+id/menu_plan" android:title="@string/menu_plan" android:showAsAction="never" android:orderInCategory="99"></item>
+    <item android:id="@+id/menu_plan" 
+        android:title="@string/menu_plan" 
+        android:showAsAction="never" 
+        android:orderInCategory="99"></item>
 </menu>
