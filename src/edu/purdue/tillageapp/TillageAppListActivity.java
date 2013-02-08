@@ -51,6 +51,15 @@ public class TillageAppListActivity extends Activity{
 		case R.id.menu_settings:
 			Toast.makeText(this, "Settings", Toast.LENGTH_LONG).show();
 		break;
+		case R.id.menu_add_field:
+			Toast.makeText(this, "ADD NEW FILED TO LIST VIEW", Toast.LENGTH_LONG).show();
+		break;
+		case R.id.menu_plan:
+			Toast.makeText(this, "Plan", Toast.LENGTH_LONG).show();
+		break;
+		case R.id.menu_help:
+			Toast.makeText(this, "OPEN HELP", Toast.LENGTH_LONG).show();
+		break;
 	}
 		// If we didn't handle, let the super version try
 				return result | super.onOptionsItemSelected(item);

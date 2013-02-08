@@ -1,12 +1,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/menu_settings"
         android:title="@string/menu_settings"
-        android:orderInCategory="100"
+        android:orderInCategory="99"
         android:showAsAction="never" />
     <item android:id="@+id/viewChangeToList" 
         android:icon="@drawable/ic_collections_view_as_list" 
         android:showAsAction="always" 
-        android:orderInCategory="2"></item>
+        android:orderInCategory="5" android:title="@string/menu_change_to_list"></item>
     <item android:id="@+id/tillage_type" 
         android:title="@string/tillage_menu" 
         android:showAsAction="always|withText" 
@@ -26,5 +26,36 @@
     <item android:id="@+id/menu_plan" 
         android:title="@string/menu_plan" 
         android:showAsAction="never" 
-        android:orderInCategory="99"></item>
+        android:orderInCategory="98"></item>
+    <item android:id="@+id/menu_help" 
+        android:orderInCategory="100" 
+        android:title="@string/menu_help" 
+        android:showAsAction="never"></item>
+    <item android:id="@+id/menu_layers" 
+        android:orderInCategory="4" 
+        android:title="@string/menu_layers" 
+        android:showAsAction="always" 
+        android:icon="@drawable/ic_av_add_to_queue">
+        <menu>
+            <group android:id="@+id/group_layers" 
+                android:checkableBehavior="single">
+                <item android:id="@+id/menu_layer_rocks" 
+                    android:title="@string/menu_layer_rocks"/>
+                <item android:id="@+id/menu_layer_hazards" 
+                    android:title="@string/menu_layer_hazards"/>
+                <item android:id="@+id/menu_layer_tilerisers" 
+                    android:title="@string/menu_layer_tilerisers"/>
+            </group>
+        </menu>
+    </item>
+    <item android:id="@+id/menu_add_field" 
+        android:icon="@drawable/ic_content_new_event" 
+        android:title="@string/menu_add_field" 
+        android:showAsAction="always" 
+        android:orderInCategory="2"></item>
+    <item android:id="@+id/menu_move_to_gps" 
+        android:icon="@drawable/ic_device_access_location_found" 
+        android:title="@string/menu_gps" 
+        android:showAsAction="always" 
+        android:orderInCategory="3"></item>
 </menu>

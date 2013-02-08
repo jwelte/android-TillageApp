@@ -11,5 +11,14 @@
     <string name="tillage_menu">Tillage</string>
     <string name="tillage_type_disc2012">Disc 2012</string>
     <string name="menu_plan">Plan</string>
+    <string name="menu_help">Help</string>
+    <string name="menu_layers">Layers</string>
+    <string name="menu_add_field">Add</string>
+    <string name="menu_gps">GPS</string>
+    <string name="menu_change_to_list">List View</string>
+    <string name="menu_layer_rocks">Show Rocks</string>
+    <string name="menu_layer_hazards">Show Hazards</string>
+    <string name="menu_layer_tilerisers">Show Tile Risers</string>
+    <string name="menu_change_to_map">Map View</string>
 
 </resources>
