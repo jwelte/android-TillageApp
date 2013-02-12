@@ -36,6 +36,7 @@ public class TillageAppActivity<Main> extends MapActivity implements LocationLis
 	int lat = 0;
 	int longi = 0;
 	LocationListener ll;
+	GeoPoint ourLocation;
 	
 	//GEOCODER AND GEOPOINT
 
@@ -64,7 +65,7 @@ public class TillageAppActivity<Main> extends MapActivity implements LocationLis
 		if (location != null) {
 			lat = (int) (location.getLatitude() * 1E6);
 			longi = (int) (location.getLongitude() * 1E6);
-			GeoPoint ourLocation = new GeoPoint(lat, longi);
+			ourLocation = new GeoPoint(lat, longi);
 			OverlayItem overlayItem = new OverlayItem(ourLocation, "What's up","2nd Sting");
 			CustomPinpoint custom = new CustomPinpoint(d, TillageAppActivity.this);
 			custom.insertPinpoint(overlayItem);
@@ -112,10 +113,10 @@ public class TillageAppActivity<Main> extends MapActivity implements LocationLis
 			startActivity(changeViewToList);
 		break;
 		case R.id.menu_settings:
-			Toast.makeText(this, "Settings", Toast.LENGTH_LONG).show();
+			Toast.makeText(this, "SETTINGS", Toast.LENGTH_LONG).show();
 		break;
 		case R.id.menu_plan:
-			Toast.makeText(this, "Plan", Toast.LENGTH_LONG).show();
+			Toast.makeText(this, "OPEN PLAN VIEW", Toast.LENGTH_LONG).show();
 		break;
 		case R.id.tillage_type_Tillage:
 			Toast.makeText(this, "Tillage", Toast.LENGTH_LONG).show();
@@ -130,7 +131,9 @@ public class TillageAppActivity<Main> extends MapActivity implements LocationLis
 			Toast.makeText(this, "OPEN FIELD DRAW VIEW", Toast.LENGTH_LONG).show();
 		break;
 		case R.id.menu_move_to_gps:
+			moveToGPSLocation();
 			Toast.makeText(this, "MOVE TO USER'S LOCATION", Toast.LENGTH_LONG).show();
+			result = true; 
 		break;
 		case R.id.menu_layer_rocks:
 			Toast.makeText(this, "IMPORT ROCKS TO MAP", Toast.LENGTH_LONG).show();
@@ -149,6 +152,11 @@ public class TillageAppActivity<Main> extends MapActivity implements LocationLis
 				return result | super.onOptionsItemSelected(item);
 	}
 
+	public void moveToGPSLocation(){
+		controller.animateTo(ourLocation);
+		controller.setZoom(20);
+	}
+	
 	@Override
 	protected boolean isRouteDisplayed() {
 		return false;
