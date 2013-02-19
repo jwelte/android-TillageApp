@@ -13,6 +13,8 @@ public class TillageAppListActivity extends Activity{
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		//Give the activity a view
 		setContentView(R.layout.activity_tillage_app_list);
 	}
 

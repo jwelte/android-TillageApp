@@ -1,6 +1,5 @@
 package edu.purdue.tillageapp;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.google.android.maps.GeoPoint;
@@ -16,7 +15,6 @@ import edu.purdue.FieldNotebook.shape.GeoPolygon;
 import edu.purdue.FieldNotebook.shape.ScreenPolygon;
 import edu.purdue.FieldNotebook.view.PolygonOverlay;
 import edu.purdue.FieldNotebook.view.PolygonSurfaceView;
-import edu.purdue.libwaterapps.note.Note;
 import edu.purdue.libwaterapps.note.Object;
 import edu.purdue.libwaterapps.view.maps.RockMapOverlay;
 
@@ -167,7 +165,7 @@ public class TillageAppActivity<Main> extends MapActivity implements LocationLis
 			Toast.makeText(this, "Disc 2012", Toast.LENGTH_LONG).show();
 		break;
 		case R.id.menu_add_field:
-			Toast.makeText(this, "OPEN FIELD DRAW VIEW", Toast.LENGTH_LONG).show();
+			//Toast.makeText(this, "OPEN FIELD DRAW VIEW", Toast.LENGTH_LONG).show();
 			startPolygon(Object.TYPE_POLYGON);
 			lastType = Object.TYPE_POLYGON;
 		break;
