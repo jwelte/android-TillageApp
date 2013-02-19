@@ -16,9 +16,12 @@
     <string name="menu_add_field">Add</string>
     <string name="menu_gps">GPS</string>
     <string name="menu_change_to_list">List View</string>
-    <string name="menu_layer_rocks">Show Rocks</string>
+    <string name="menu.layer_rocks_show">Show Rocks</string>
     <string name="menu_layer_hazards">Show Hazards</string>
     <string name="menu_layer_tilerisers">Show Tile Risers</string>
     <string name="menu_change_to_map">Map View</string>
+    <string name="menu_layer_rocks_hide">Hide Rocks</string>
+    <string name="draw_accept_accept">Accept Annotations</string>
+    <string name="draw_accept_reject">Reject Annotations</string>
 
 </resources>

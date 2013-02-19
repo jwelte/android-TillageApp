@@ -40,7 +40,7 @@
             <group android:id="@+id/group_layers" 
                 android:checkableBehavior="single">
                 <item android:id="@+id/menu_layer_rocks" 
-                    android:title="@string/menu_layer_rocks"/>
+                    android:title="@string/menu.layer_rocks_show"/>
                 <item android:id="@+id/menu_layer_hazards" 
                     android:title="@string/menu_layer_hazards"/>
                 <item android:id="@+id/menu_layer_tilerisers" 
