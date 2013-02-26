@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:text="Large Text"
+            android:text="267 of 459 ac Remaining"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_below="@+id/tv_acres_remaining"
-            android:text="Medium Text"
+            android:text="36 Fields"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
@@ -36,8 +36,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_acres_remaining"
             android:layout_centerInParent="true"
-            android:text="Medium Text"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:text="4 Done"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
         
         <TextView
             android:id="@+id/tv_field_remaining_count"
@@ -45,8 +45,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/tv_acres_remaining"
-            android:text="Medium Text"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:text="4 Need Plan"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
     </RelativeLayout>
     

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- Reject the new position of the field -->
+    <item 
+        android:id="@+id/reject"
+        android:showAsAction="always" 
+        android:icon="@drawable/ic_content_discard"
+        android:title="@string/draw_accept_reject" android:orderInCategory="3"/>
+     
+    <!-- Accept the new position of the field -->
+    <item 
+        android:id="@+id/accept" 
+        android:showAsAction="always" 
+        android:icon="@drawable/accept"
+        android:title="@string/draw_accept_accept" android:orderInCategory="1"/>
+    <item 
+        android:id="@+id/undo_point" 
+        android:title="@string/menu_undo_point" android:showAsAction="always" android:orderInCategory="2" android:icon="@drawable/ic_content_undo"/>
+
+</menu>

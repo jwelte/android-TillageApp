@@ -23,5 +23,6 @@
     <string name="menu_layer_rocks_hide">Hide Rocks</string>
     <string name="draw_accept_accept">Accept Annotations</string>
     <string name="draw_accept_reject">Reject Annotations</string>
+    <string name="menu_undo_point">Undo Last Point</string>
 
 </resources>

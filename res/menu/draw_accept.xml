@@ -19,5 +19,6 @@
         android:title="@string/draw_accept_accept"
         android:visible="true"
         android:enabled="true" />
+    <item android:id="@+id/undo_point" android:title="@string/menu_undo_point"></item>
     
 </menu>	

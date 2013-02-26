@@ -264,7 +264,7 @@ private class DrawAcceptActionModeCallback implements ActionMode.Callback {
 		// Should inflate the menu
 		public boolean onCreateActionMode(ActionMode mode, Menu menu) {
 			MenuInflater inflater = mode.getMenuInflater();
-			inflater.inflate(R.menu.draw_accept, menu);
+			inflater.inflate(R.menu.field_accept, menu);
 				
 			return true;
 		}
