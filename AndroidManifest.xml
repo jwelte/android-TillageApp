@@ -19,7 +19,9 @@
         <uses-library android:name="com.google.android.maps" />
         <activity
             android:name=".TillageAppActivity"
-            android:label="@string/title_activity_tillage_app" >
+            android:label="@string/title_activity_tillage_app"
+            android:screenOrientation="landscape"
+			android:configChanges="keyboardHidden|orientation|screenSize" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -27,7 +29,9 @@
         </activity>
         <activity
             android:name=".TillageAppListActivity"
-            android:label="@string/title_activity_tillage_app" >
+            android:label="@string/title_activity_tillage_app"
+            android:screenOrientation="landscape"
+			android:configChanges="keyboardHidden|orientation|screenSize" >
             <intent-filter>
                 <action android:name="edu.purdue.tillageapp.TILLAGEAPPLISTACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
