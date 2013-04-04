@@ -18,6 +18,8 @@ import edu.purdue.FieldNotebook.view.PolygonSurfaceView;
 import edu.purdue.libwaterapps.note.Object;
 import edu.purdue.libwaterapps.view.maps.RockMapOverlay;
 
+import android.app.ActionBar;
+import android.app.ActionBar.OnNavigationListener;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -31,6 +33,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 public class TillageAppActivity<Main> extends MapActivity implements LocationListener{
@@ -55,10 +58,19 @@ public class TillageAppActivity<Main> extends MapActivity implements LocationLis
 	static final int SPAN_LAT = 2000;
 	static final int SPAN_LONG = 2000;
 	
+	// An array of strings to populate drop down navigation list //
+    String[] actions = new String[] {
+        "Tillage",
+        "Chisel 2012",
+        "Disc 2013"
+    };
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		//Hide the application name in the action bar
+		getActionBar().setDisplayShowTitleEnabled(false);
 		
 		//Give the activity a view
 		setContentView(R.layout.activity_tillage_app);
@@ -104,8 +116,27 @@ public class TillageAppActivity<Main> extends MapActivity implements LocationLis
 								
 		// Get a hold of the polygon surface
 		mPolygonView = (PolygonSurfaceView)findViewById(R.id.polySurface);
+		
+	    // Create an array adapter to populate drop down list //
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getBaseContext(), android.R.layout.simple_spinner_dropdown_item, actions);
+ 
+        // Enabling drop down list navigation for the action bar //
+        getActionBar().setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
+ 
+        // Defining Navigation listener //
+        ActionBar.OnNavigationListener navigationListener = new OnNavigationListener() {
+ 
+            @Override
+            public boolean onNavigationItemSelected(int itemPosition, long itemId) {
+                Toast.makeText(getBaseContext(), "You selected : " + actions[itemPosition]  , Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        };
+        /** Setting drop down items and item navigation listener for the action bar */
+        getActionBar().setListNavigationCallbacks(adapter, navigationListener);
 	}
 
+    
 	@Override
 	protected void onPause() {
 		super.onPause();
@@ -124,7 +155,6 @@ public class TillageAppActivity<Main> extends MapActivity implements LocationLis
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.activity_tillage_app, menu);
-
 		return true;
 	}
 
@@ -154,15 +184,6 @@ public class TillageAppActivity<Main> extends MapActivity implements LocationLis
 		break;
 		case R.id.menu_plan:
 			Toast.makeText(this, "OPEN PLAN VIEW", Toast.LENGTH_LONG).show();
-		break;
-		case R.id.tillage_type_Tillage:
-			Toast.makeText(this, "Tillage", Toast.LENGTH_LONG).show();
-		break;
-		case R.id.tillage_type_Chisel2012:
-			Toast.makeText(this, "Chisel 2012", Toast.LENGTH_LONG).show();
-		break;
-		case R.id.tillage_type_disc2012:
-			Toast.makeText(this, "Disc 2012", Toast.LENGTH_LONG).show();
 		break;
 		case R.id.menu_add_field:
 			//Toast.makeText(this, "OPEN FIELD DRAW VIEW", Toast.LENGTH_LONG).show();
@@ -314,6 +335,7 @@ public void finishPolygon() {
 		polygon = mPolygonView.stopDrawing();
 		
 		GeoPolygon geoPolygon = new GeoPolygon(polygon, map.getProjection());
+		
 		
 		Object obj = new Object(this, Object.getNewGroupId(this), lastType, geoPolygon.getPoints(), lastColor);
 		obj.save();
